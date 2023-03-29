@@ -26,11 +26,11 @@ const DisplayMeal = ({text}) => {
             newList = [...listItem, item];
         }
         else{
-            return alert('Not okey');
+            return toast.error("This item already exist!");
         }
         setListItem(newList)
         savedDataToDb(item)
-        toast("Added your Item!");
+        toast.success("Added your Item!");
     }
     return (
         <div className="grid grid-cols-5 min-h-[100vh]">
