@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Card = ({cart}) => {
-    console.log(cart);
+    // console.log(cart);
     const {strMealThumb, strMeal, strArea, strCategory} = cart;
     return (
         <>
