@@ -7,7 +7,7 @@ const Header = (props) => {
             <img className="h-6" src={logo} alt="" />
             <div className='flex items-center'>
                 <input onChange={(e) => props.getSearchText(e)} className="h-8 w-[300px] rounded-l text-sm pl-3 outline-none font-semibold" type="text" placeholder="Search food name"/>
-                <button className="px-3 h-8 bg-lime-700 font-semibold text-base text-white rounded outline-none">Search</button>
+                <button className="px-3 h-8 bg-lime-700 font-semibold text-base text-white rounded-r outline-none">Search</button>
             </div>
         </div>
     );
