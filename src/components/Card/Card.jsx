@@ -1,7 +1,8 @@
 import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCirclePlus } from '@fortawesome/free-solid-svg-icons'
 
-const Card = ({cart}) => {
-    // console.log(cart);
+const Card = ({cart, getPickedItem}) => {
     const {strMealThumb, strMeal, strArea, strCategory} = cart;
     return (
         <>
@@ -12,7 +13,7 @@ const Card = ({cart}) => {
                     <p className="text-sm font-semibold my-1">Country origin: {strArea}</p>
                     <p className="text-sm font-semibold">Category: {strCategory}</p>
                 </div>
-                    <button className="font-semibold text-base h-8 w-full bg-lime-700 text-white rounded">Pick Items</button>
+                    <button onClick={() => getPickedItem(cart)} className="font-semibold text-base h-8 w-full bg-lime-700 text-white rounded">Pick Item <FontAwesomeIcon icon={faCirclePlus} /></button>
             </div>
         </>
     );
