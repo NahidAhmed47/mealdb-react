@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { toast } from 'react-toastify';
 import Card from '../Card/Card';
 import PickedCart from '../PickedCart/PickedCart';
 import {savedDataToDb, getSavedData } from '../Utilities/savedDataDb';
@@ -25,10 +26,11 @@ const DisplayMeal = ({text}) => {
             newList = [...listItem, item];
         }
         else{
-            return alert('Already added!')
+            return alert('Not okey');
         }
         setListItem(newList)
         savedDataToDb(item)
+        toast("Added your Item!");
     }
     return (
         <div className="grid grid-cols-5 min-h-[100vh]">

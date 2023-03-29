@@ -1,6 +1,7 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCirclePlus } from '@fortawesome/free-solid-svg-icons'
+import { faCirclePlus } from '@fortawesome/free-solid-svg-icons';
+import {toast } from 'react-toastify';
 
 const Card = ({cart, getPickedItem}) => {
     const {strMealThumb, strMeal, strArea, strCategory} = cart;
